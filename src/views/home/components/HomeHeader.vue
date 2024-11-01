@@ -54,7 +54,8 @@
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              ><span class="me-2">Hello, User</span> <i class="bi bi-person"></i
+              ><span class="me-2">Hello, Ralph Maron Eda</span>
+              <i class="bi bi-person"></i
             ></a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
