@@ -2,6 +2,8 @@
   import { ref } from 'vue';
   import { useRouter } from 'vue-router';
 
+  import AboutModal from './components/AboutModal.vue';
+
   const router = useRouter();
 
   const username = ref<string>('');
@@ -15,11 +17,7 @@
 
     if (username.value === '' && password.value === '') {
       showResponse.value = true;
-      response.value = 'Invalid password.';
-      return;
-    } else if (password.value.length < 8) {
-      showResponse.value = true;
-      response.value = 'Password must be more than or equal to 8 characters.';
+      response.value = 'Username and password cannot be empty.';
       return;
     }
     showResponse.value = false;
@@ -74,5 +72,6 @@
         </form>
       </div>
     </div>
+    <AboutModal />
   </div>
 </template>
