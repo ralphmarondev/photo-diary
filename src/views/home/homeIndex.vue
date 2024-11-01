@@ -158,22 +158,20 @@
             "
           >
             <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
+              date="November 1, 2024"
+              :image="require('@/assets/images/mountain.png')"
+              title="A day to remember"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, totam!"
+              location="Mars"
+              style="width: 100%; max-width: 600px; margin-bottom: 20px"
             />
             <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
-            />
-            <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
-            />
-            <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
-            />
-            <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
-            />
-            <PhotoDiaryCard
-              style="width: 100%; max-width: 500px; margin-bottom: 20px"
+              date="November 1, 2024"
+              image="https://drive.google.com/uc?id=1HEt6HT0rOYOhqoI6JeKCVIbN1W0p2S9t"
+              title="A day to remember"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, totam!"
+              location="Mars"
+              style="width: 100%; max-width: 600px; margin-bottom: 20px"
             />
           </div>
         </div>

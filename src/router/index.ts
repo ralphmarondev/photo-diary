@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw, RouteMeta } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw, RouteMeta } from 'vue-router'
 
 // extend RouteMeta interface to include our custom properties
 interface CustomRouteMeta extends RouteMeta {
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 })
 

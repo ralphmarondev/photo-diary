@@ -1,6 +1,19 @@
+<script setup lang="ts">
+  import { defineProps } from 'vue';
+
+  // eslint-disable-next-line vue/no-setup-props-destructure
+  const { date, image, title, description, location } = defineProps<{
+    date: string;
+    image: string;
+    title: string;
+    description: string;
+    location: string;
+  }>();
+</script>
+
 <template>
   <div class="container mb-3">
-    <div class="card" style="max-width: 500px">
+    <div class="card" style="max-width: 600px">
       <div class="card-content">
         <div class="row mx-2 mt-2 align-items-center">
           <div class="col-auto">
@@ -18,22 +31,22 @@
           </div>
           <div class="col">
             <p class="text-primary text-start fs-5 mb-1">Photo Diary</p>
-            <p class="mb-0">November 1, 2024</p>
+            <p class="mb-0">{{ date }}</p>
           </div>
         </div>
         <hr />
         <div class="row m-2">
-          <img src="@/assets/images/mountain.png" alt="Mountain" />
+          <img
+            :src="image"
+            alt="Photo Diary Image"
+            style="max-height: 300px; object-fit: cover; min-height: 200px"
+          />
         </div>
 
         <d class="row m-2">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perferendis explicabo officia quasi dolores, tenetur accusamus
-            quaerat voluptatum fuga cumque esse ea maxime a atque ex sunt! Quis
-            harum modi vero?
-          </p>
-          <p>At School</p>
+          <p class="text-primary">{{ title }}</p>
+          <p class="text-secondary">{{ description }}</p>
+          <p class="text-tertiary">{{ location }}</p>
         </d>
       </div>
     </div>
