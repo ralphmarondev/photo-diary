@@ -1,5 +1,8 @@
 <script setup lang="ts">
   import { ref } from 'vue';
+  import { useRouter } from 'vue-router';
+
+  const router = useRouter();
 
   const username = ref<string>('');
   const password = ref<string>('');
@@ -13,12 +16,20 @@
     if (username.value === '' && password.value === '') {
       showResponse.value = true;
       response.value = 'Invalid password.';
+      return;
     } else if (password.value.length < 8) {
       showResponse.value = true;
       response.value = 'Password must be more than or equal to 8 characters.';
+      return;
+    }
+    showResponse.value = false;
+    response.value = '';
+
+    if (username.value === 'ralphmaron' && password.value === 'iscuteee') {
+      router.push('/home');
     } else {
-      showResponse.value = false;
-      response.value = '';
+      showResponse.value = true;
+      response.value = 'Invalid credentials.';
     }
   }
 </script>

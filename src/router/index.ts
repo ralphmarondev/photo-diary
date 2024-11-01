@@ -8,10 +8,16 @@ interface CustomRouteMeta extends RouteMeta {
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
+    name: 'login',
     component: () => import('@/views/auth/login/loginIndex.vue'),
     meta: { title: 'Login - Photo Diary' } as CustomRouteMeta
   },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('@/views/home/homeIndex.vue'),
+    meta: { title: 'Home - Photo Diary' } as CustomRouteMeta
+  }
 ]
 
 const router = createRouter({
